@@ -40,7 +40,8 @@
       padding-top: var(--bodyPaddingTop);
     }
   }
-  
+
+  /*
   .ButtonLink {
     color: var(--white);
     border: 1px solid var(--white);
@@ -60,6 +61,7 @@
   .ButtonLink:focus {
     opacity: .5;
   }
+  */
   
   @media (max-width: 800px) {
     a.ButtonLink {

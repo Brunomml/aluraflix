@@ -1,15 +1,15 @@
 import React from 'react';
-import Menu from './components/Menu'
-import dadosIniciais from './data/dados_iniciais.json'
-import BannerMain from './components/BannerMain'
-import Carousel from './components/Carousel'
-import Footer from './components/Footer'
+import Menu from '../../components/Menu'
+import dadosIniciais from '../../data/dados_iniciais.json'
+import BannerMain from '../../components/BannerMain'
+import Carousel from '../../components/Carousel'
+import Footer from '../../components/Footer'
 
-function App() {
+function Home() {
   return (
     <div style={{background: "#141414"}}>
       <Menu />
-      <BannerMain url="https://www.youtube.com/watch?v=lrYABThl188" 
+      <BannerMain url="https://www.youtube.com/watch?v=lrYABThl188"
       videoDescription="O canal Curso em Vídeo completou 1 MILHÃO de inscritos! Para comemorar, preparamos esse especial de fim de ano, apresentando parte da nossa equipe, planos para 2020 e muitas outras novidades. Assista até o fim!" 
       videoTitle="Show do 1 MILHÃO 🌽 Feliz 2020 🥳"/>
 
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

@@ -3,7 +3,7 @@ import React from './node_modules/react';
 import SlickSlider from './node_modules/react-slick';
 import styled from './node_modules/styled-components';
 
-const Container = styled.ul`
+export const Container = styled.ul`
   padding: 0;
   margin: 0;
   .slick-prev,

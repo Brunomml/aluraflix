@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from './node_modules/react';
-import SlickSlider from './node_modules/react-slick';
-import styled from './node_modules/styled-components';
+import React from 'react';
+import SlickSlider from 'react-slick';
+import styled from 'styled-components';
 
-export const Container = styled.ul`
+const Container = styled.ul`
   padding: 0;
   margin: 0;
   .slick-prev,
@@ -37,3 +37,22 @@ export const SliderItem = styled.li`
     object-fit: cover;
   }
 `;
+
+
+const Slider = ({ children }) => (
+  <Container>
+    <SlickSlider {...{
+      dots: false,
+      infinite: false,
+      speed: 300,
+      centerMode: false,
+      variableWidth: true,
+      adaptiveHeight: true,
+    }}
+    >
+      {children}
+    </SlickSlider>
+  </Container>
+);
+
+export default Slider; 

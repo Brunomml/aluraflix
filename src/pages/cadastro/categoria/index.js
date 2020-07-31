@@ -3,24 +3,27 @@ import PageDefault from '../../../components/PageDefault'
 import { Link } from 'react-router-dom'
 
 function CadastroCategoria() {
-  const [categorias, setCategoria] = useState(['teste'])
-  const valoresiniciais = {
-    nome: 'categoria inicial',
-    descriçao: 'descrição inicial',
-    cor: '#bbb',
+  const valoresIniciais = {
+    nome: '',
+    descrição: '',
+    cor: '#000',
   }
-  const [Values, setValues] = useState(valoresiniciais)
   
+  const [categorias, setCategoria] = useState([])
+  const [Values, setValues] = useState(valoresIniciais)
+
   function setValue(chave, valor){
     setValues({
       ...Values,
-      [chave]: valor,
+      [chave]: valor
     })
   }
 
-  function hundlerChange(infoEvents) {
-    setValues(infoEvents.target.getAttribute('name'), 
-    infoEvents.target.value
+  function hundlerChange(infosDoEvento) {
+    const { getAttribute, value } = infosDoEvento.target
+    setValue(
+    getAttribute('name'), 
+    value
     )
   }
 
@@ -34,6 +37,8 @@ function CadastroCategoria() {
           ...categorias,
           Values
         ])
+
+        setValues(valoresIniciais)
       }}>
         <div>
             Nome da Categoria:
@@ -47,9 +52,9 @@ function CadastroCategoria() {
           </label>
         </div>
         <div>
-            descriçao:
+          descrição:
           <label>
-            <textarea
+            <input
               type="text"
               value={Values.descrição}
               name='descrição'
@@ -75,10 +80,10 @@ function CadastroCategoria() {
       </form>
 
       <ul>
-        {categorias.map((categorias, indice) => {
+        {categorias.map((categoria, indice) => {
           return (
-            <li key={`${categorias}${indice}`}>
-              {categorias.nome}
+            <li key={`${categoria}${indice}`}>
+              {categoria.nome}
             </li>
           )
         })}

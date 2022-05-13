@@ -1,6 +1,6 @@
 import styled from 'styled-component'
 
 
-export const nameError =`
+export default nameError =`
     color: red;
 `

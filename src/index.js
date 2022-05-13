@@ -23,4 +23,4 @@ ReactDOM.render(
   document.getElementById('root')
   );
   
-//<Route component={Page404} />
+<Route component={Page404} />
